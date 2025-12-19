@@ -2,7 +2,6 @@
 
 ## DON'T RUN IT MANUALLY!!!
 
-
 set -euo pipefail
 IFS=$'\n\t'
 

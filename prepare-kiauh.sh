@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 GIT_REPO="https://github.com/dw-0/kiauh.git"
 
