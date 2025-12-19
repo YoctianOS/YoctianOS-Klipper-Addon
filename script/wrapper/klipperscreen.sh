@@ -1,13 +1,15 @@
 #!/bin/bash
 
+## DON'T RUN IT MANUALLY!!!
+
 # Check if the user is root or using sudo
 if [ "$EUID" -eq 0 ] || [ -n "$SUDO_USER" ]; then
     echo "This script must not be run as root or with sudo."
     exit 1
 fi
 
-TARGET="$HOME/kiauh/kiauh.sh"
-REPO_DIR="$HOME/kiauh"
+TARGET=""
+REPO_DIR=""
 
 # Check if the target file exists
 if [ ! -f "$TARGET" ]; then
@@ -16,14 +18,14 @@ if [ ! -f "$TARGET" ]; then
 fi
 
 # Apply patches if any exist in ./patches using git
-PATCH_DIR="./patches"
+PATCH_DIR="./patches/klipperscreen"
 if [ -d "$PATCH_DIR" ]; then
     cd "$REPO_DIR" || {
         echo "Failed to enter repository directory $REPO_DIR"
         exit 1
     }
 
-    for patch in "$PATCH_DIR"/kiauh/*.patch; do
+    for patch in "$PATCH_DIR"/*.patch; do
         [ -f "$patch" ] || continue
         echo "Applying patch with git: $patch"
         git apply "$patch" || {
