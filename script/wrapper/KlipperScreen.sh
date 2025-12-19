@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-
-## DON'T RUN IT MANUALLY!!!
-
 set -euo pipefail
 IFS=$'\n\t'
+
+## DON'T RUN IT MANUALLY!!!
 
 # Directory of this script (resolve relative paths reliably)
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
