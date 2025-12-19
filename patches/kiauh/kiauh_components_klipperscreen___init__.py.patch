@@ -1,0 +1,10 @@
+--- a/kiauh/components/klipperscreen/__init__.py
++++ b/kiauh/components/klipperscreen/__init__.py
+@@ -27,6 +27,6 @@
+     "scripts/KlipperScreen-requirements.txt"
+ )
+ KLIPPERSCREEN_INSTALL_SCRIPT = KLIPPERSCREEN_DIR.joinpath(
+-    "scripts/KlipperScreen-install.sh"
++    "/opt/YoctianOS-Klipper-Addon/script/wrapper/KlipperScreen.sh" 
+ )
+ KLIPPERSCREEN_SERVICE_FILE = SYSTEMD.joinpath(KLIPPERSCREEN_SERVICE_NAME)

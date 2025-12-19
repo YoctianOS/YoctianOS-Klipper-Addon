@@ -15,8 +15,8 @@ if [ "$EUID" -eq 0 ] || [ -n "${SUDO_USER:-}" ]; then
 fi
 
 # Configurable variables
-REPO_DIR="${REPO_DIR:-$HOME/kiauh}"
-TARGET="${TARGET:-$REPO_DIR/kiauh.sh}"
+REPO_DIR="${REPO_DIR:-$HOME/kiauh}" ##To edit
+TARGET="${TARGET:-$REPO_DIR/kiauh.sh}" ##To edit
 
 # Basic checks
 if ! command -v git >/dev/null 2>&1; then
@@ -44,7 +44,7 @@ if [ ! -x "$TARGET" ]; then
 fi
 
 # Apply patches if present (patches path is relative to this script)
-PATCH_DIR="$SCRIPT_DIR/patches/kiauh"
+PATCH_DIR="$SCRIPT_DIR/patches/KlipperScreen"
 if [ -d "$PATCH_DIR" ]; then
     shopt -s nullglob
     patches=("$PATCH_DIR"/*.patch)
