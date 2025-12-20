@@ -14,8 +14,8 @@ if [ "$EUID" -eq 0 ] || [ -n "${SUDO_USER:-}" ]; then
 fi
 
 # Configurable variables
-REPO_DIR="${REPO_DIR:-$HOME/kiauh}" ##To edit
-TARGET="${TARGET:-$REPO_DIR/kiauh.sh}" ##To edit
+REPO_DIR="${REPO_DIR:-$HOME/kiauh/KlipperScreen}"
+TARGET="${TARGET:-$REPO_DIR/scripts/KlipperScreen-install.sh}"
 
 # Basic checks
 if ! command -v git >/dev/null 2>&1; then

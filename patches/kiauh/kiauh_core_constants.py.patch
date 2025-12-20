@@ -5,7 +5,7 @@
  
  # global dependencies
 -GLOBAL_DEPS = ["git", "wget", "curl", "unzip", "dfu-util", "python3-virtualenv"]
-+GLOBAL_DEPS = ["git", "wget", "curl", "unzip", "dfu-util", "python3-virtualenv"] 
++GLOBAL_DEPS = ["git", "wget", "curl", "unzip", "dfu-util", "python3-venv"] 
  
  # strings
  INVALID_CHOICE = "Invalid choice. Please select a valid value."
