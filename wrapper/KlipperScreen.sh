@@ -14,7 +14,7 @@ if [ "$EUID" -eq 0 ] || [ -n "${SUDO_USER:-}" ]; then
 fi
 
 # Configurable variables
-REPO_DIR="${REPO_DIR:-$HOME/kiauh/KlipperScreen}"
+REPO_DIR="${REPO_DIR:-$HOME/KlipperScreen}"
 TARGET="${TARGET:-$REPO_DIR/scripts/KlipperScreen-install.sh}"
 
 # Basic checks
