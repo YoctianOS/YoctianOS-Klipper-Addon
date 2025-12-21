@@ -23,7 +23,7 @@
        echo_text "Choose graphical backend"
 -      echo_ok "Default is Xserver"
 -      echo_text "Wayland is EXPERIMENTAL, needs kms/drm drivers, and doesn't support DPMS"
-+      echo_ok "XServer" 
++      echo_ok "Install XServer" 
 +      #echo_text "Wayland is EXPERIMENTAL, needs kms/drm drivers, and doesn't support DPMS" 
        echo_text ""
 -      echo "Press enter for default (Xserver)"

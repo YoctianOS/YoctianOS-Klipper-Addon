@@ -1,0 +1,30 @@
+--- a/scripts/install-moonraker.sh
++++ b/scripts/install-moonraker.sh
+@@ -216,12 +216,12 @@
+ # *** SYSTEM DEPENDENCIES START ***
+ system_deps = {
+     "debian": [
+-        "python3-virtualenv", "python3-dev", "libopenjp2-7", "libsodium-dev",
+-        "zlib1g-dev", "libjpeg-dev", "packagekit",
+-        "wireless-tools; distro_id != 'ubuntu' or distro_version <= '24.04'",
+-        "iw; distro_id == 'ubuntu' and distro_version >= '24.10'",
+-        "python3-libcamera; vendor == 'raspberry-pi' and distro_version >= '11'",
+-        "curl", "build-essential"
++        "python3-venv", "python3-dev", "openjpeg", "libsodium-dev", 
++        "zlib-dev", "jpeg",
++        "wireless-tools",
++        "iw",
++        "packagekit,
++        "curl", "packagegroup-core-buildessential" 
+     ],
+ }
+ # *** SYSTEM DEPENDENCIES END ***
+@@ -279,7 +279,7 @@
+     fi
+ 
+     if [ ! -d ${PYTHONDIR} ]; then
+-        virtualenv -p /usr/bin/python3 ${PYTHONDIR}
++        python3 -m venv ${PYTHONDIR} 
+         #GET_PIP="${HOME}/get-pip.py"
+         #curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o ${GET_PIP}
+         #${PYTHONDIR}/bin/python ${GET_PIP}
