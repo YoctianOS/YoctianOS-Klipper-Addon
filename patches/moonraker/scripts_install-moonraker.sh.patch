@@ -14,7 +14,7 @@
 +        "zlib-dev", "jpeg",
 +        "wireless-tools",
 +        "iw",
-+        "packagekit,
++        #"packagekit,
 +        "curl", "packagegroup-core-buildessential" 
      ],
  }
