@@ -10,12 +10,12 @@
 -        "iw; distro_id == 'ubuntu' and distro_version >= '24.10'",
 -        "python3-libcamera; vendor == 'raspberry-pi' and distro_version >= '11'",
 -        "curl", "build-essential"
-+        "python3-venv", "python3-dev", "openjpeg", "libsodium-dev", 
-+        "zlib-dev", "jpeg",
++        "python3-venv", "python3-dev", "zlib-dev", "libsodium-dev", 
++        "openjpeg", "jpeg",
 +        "wireless-tools",
 +        "iw",
-+        "",
-+        "curl", "packagegroup-core-buildessential" 
++        "curl",
++        "packagegroup-core-buildessential" 
      ],
  }
  # *** SYSTEM DEPENDENCIES END ***

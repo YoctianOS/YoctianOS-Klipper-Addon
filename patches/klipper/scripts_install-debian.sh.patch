@@ -28,7 +28,7 @@
 -    PKGLIST="${PKGLIST} stm32flash libnewlib-arm-none-eabi"
 -    PKGLIST="${PKGLIST} gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0 pkg-config"
 +    PKGLIST="${PKGLIST} stm32flash yoctianos-arm-none-eabi" 
-+    PKGLIST="${PKGLIST} libs-yoctianos-arm-none-eabi libusb-1.0-0 pkgconfig" 
++    PKGLIST="${PKGLIST} libusb-1.0-0 pkgconfig" 
  
      # Update system package info
      report_status "Running apt-get update..."
