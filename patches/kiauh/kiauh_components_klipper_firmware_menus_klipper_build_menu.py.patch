@@ -1,0 +1,11 @@
+--- a/kiauh/components/klipper_firmware/menus/klipper_build_menu.py
++++ b/kiauh/components/klipper_firmware/menus/klipper_build_menu.py
+@@ -132,7 +132,7 @@
+         self.title = "Build Firmware Menu"
+         self.title_color = Color.CYAN
+         self.previous_menu: Type[BaseMenu] | None = previous_menu
+-        self.deps: Set[str] = {"build-essential", "dpkg-dev", "make"}
++        self.deps: Set[str] = {"packagegroup-core-buildessential", "dpkg-dev", "make"} 
+         self.missing_deps: List[str] = check_package_install(self.deps)
+         self.flash_options = FlashOptions()
+         self.kconfigs_dirname = KLIPPER_KCONFIGS_DIR
