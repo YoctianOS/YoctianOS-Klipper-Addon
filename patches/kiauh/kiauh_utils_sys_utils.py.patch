@@ -1,0 +1,11 @@
+--- a/kiauh/utils/sys_utils.py
++++ b/kiauh/utils/sys_utils.py
+@@ -110,7 +110,7 @@
+     Logger.print_status("Set up Python virtual environment ...")
+     # If binarry override is not set, we use default defined here
+     python_binary = use_python_binary if use_python_binary else "/usr/bin/python3"
+-    cmd = ["virtualenv", "-p", python_binary, target.as_posix()]
++    cmd = [python_binary, "-m", "venv", target.as_posix()] 
+     cmd.append(
+         "--system-site-packages"
+     ) if allow_access_to_system_site_packages else None
