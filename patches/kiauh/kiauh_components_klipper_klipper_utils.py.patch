@@ -1,0 +1,11 @@
+--- a/kiauh/components/klipper/klipper_utils.py
++++ b/kiauh/components/klipper/klipper_utils.py
+@@ -215,7 +215,7 @@
+     packages = parse_packages_from_file(script)
+ 
+     # Add pkg-config for rp2040 build
+-    packages.append("pkg-config")
++    packages.append("pkgconfig") 
+ 
+     # Add dbus requirement for DietPi distro
+     if check_file_exist(Path("/boot/dietpi/.version")):
