@@ -14,7 +14,7 @@ fi
 # Configurable
 REFRESH_BEFORE_PATCH="${REFRESH_BEFORE_PATCH:-true}"
 PRIMARY_REPO_NAME="${PRIMARY_REPO_NAME:-kiauh}"
-REPOS_FILE="${REPOS_FILE:-$SCRIPT_DIR/repos.conf}"   # changed filename here
+REPOS_FILE="${REPOS_FILE:-$SCRIPT_DIR/repos.conf}"
 
 # Primary repo defaults
 declare -A REPO_URL
