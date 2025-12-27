@@ -1,0 +1,34 @@
+--- a/scripts/install-ubuntu-22.04.sh
++++ b/scripts/install-ubuntu-22.04.sh
+@@ -10,16 +10,16 @@
+ install_packages()
+ {
+     # Packages for python cffi
+-    PKGLIST="virtualenv python3-dev libffi-dev build-essential"
++    PKGLIST="python3-venv python3-dev libffi-dev packagegroup-core-buildessential"
+     # kconfig requirements
+-    PKGLIST="${PKGLIST} libncurses-dev"
++    PKGLIST="${PKGLIST} ncurses-dev"
+     # hub-ctrl
+-    PKGLIST="${PKGLIST} libusb-dev"
++    PKGLIST="${PKGLIST} libusb-1.0-dev"
+     # AVR chip installation and building
+-    PKGLIST="${PKGLIST} avrdude gcc-avr binutils-avr avr-libc"
++    PKGLIST="${PKGLIST} avrdude avr-gcc avr-binutils avr-libc"
+     # ARM chip installation and building
+-    PKGLIST="${PKGLIST} stm32flash dfu-util libnewlib-arm-none-eabi"
+-    PKGLIST="${PKGLIST} gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0"
++    PKGLIST="${PKGLIST} stm32flash dfu-util"
++    PKGLIST="${PKGLIST} yoctianos-arm-none-eabi libusb-1.0-0 pkgconfig"
+ 
+     # Update system package info
+     report_status "Running apt-get update..."
+@@ -36,7 +36,7 @@
+     report_status "Updating python virtual environment..."
+ 
+     # Create virtualenv if it doesn't already exist
+-    [ ! -d ${PYTHONDIR} ] && virtualenv -p python3 ${PYTHONDIR}
++    [ ! -d ${PYTHONDIR} ] && python3 -m venv ${PYTHONDIR}
+ 
+     # Install/update dependencies
+     ${PYTHONDIR}/bin/pip install -r ${SRCDIR}/scripts/klippy-requirements.txt
